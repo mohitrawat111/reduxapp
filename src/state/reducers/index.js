@@ -1,10 +1,19 @@
-import { combineReducers } from "redux";
-import amountReducer from "./amountReducer"
+export const depositMoney = (amount) => {
+    return (dispatch) => {
+        dispatch({
+            type: 'deposit',
+            pay: amount
+        })
+    }
 
+}
 
-const reducers = combineReducers({
-    amount: amountReducer
+export const withdrawMoney = (amount) => {
+    return (dispatch) => {
+        dispatch({
+            type: 'withdraw',
+            pay: amount
+        })
+    }
 
-})
-
-export default reducers
+}
